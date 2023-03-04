@@ -5,7 +5,7 @@ const Home = () => {
   const [userData, setUserData] = useState({});
   useEffect(() => {
     fetchData();
-  },[]);
+  });
   // send bckend root and get Data
   const fetchData = async () => {
   
