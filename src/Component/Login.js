@@ -24,7 +24,7 @@ const setLogin = ((data)=>{
     const {user, pass} = loginData;
     try {
       const res = await fetch('/login',{
-        method:"post",
+        method:"POST",
         headers:{
           'Accept':"application/json",
           'Content-Type':"application/json"
