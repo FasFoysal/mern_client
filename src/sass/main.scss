@@ -1,0 +1,423 @@
+// mixin 
+@mixin dFlex($a) {
+    display: flex;
+    flex-direction: $a;
+}
+
+@mixin homeStyle($color) {
+    width: 50%;
+    background-color: $color;
+    height: 100vh;
+}
+
+@mixin flexMore($bet) {
+    align-items: center;
+    justify-content: $bet;
+}
+
+@mixin marginAuto($tb) {
+    margin: $tb auto;
+}
+
+@mixin inputStyle {
+    padding: 16px 25px;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+
+    &::placeholder {
+        color: rgb(62, 62, 226);
+        font: bolder;
+    }
+}
+
+@mixin mainInputStyle {
+    text-align: center;
+    padding: 12px 4rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid greenyellow;
+
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid green;
+    }
+}
+
+@mixin resImage {
+    width: 50vh;
+    margin: 0 30px;
+}
+
+// variable navbar
+$logoWidth: 150px;
+$navMargin: 0 auto;
+$navPaddingTopButtom: 20px 100px;
+$navPaddingTopButtomColor: rgb(128 128 128 / 7%);
+$navMarginLeft: 18px;
+$navPadding: 8px 12px;
+$navColor: rgb(13, 255, 0);
+$navShadow: -1px 1px 8px gray;
+$navHoverBorder: 1px solid orange;
+$navHomeLeftColor: #80808036;
+$navHomeRightColor: #fff;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// navbar
+.active {
+    box-shadow: none !important;
+    color: blueviolet !important;
+    border-radius: 5px !important;
+}
+
+.manu {
+    @include dFlex(row);
+    margin: $navMargin;
+    @include flexMore(space-between);
+    // width: 90%;
+    padding: $navPaddingTopButtom;
+    background-color: $navPaddingTopButtomColor;
+}
+
+.imgdiv {
+    @include dFlex(row);
+    align-items: center;
+
+    img {
+        width: $logoWidth;
+    }
+}
+
+.link {
+    @include dFlex(row);
+
+    a {
+        padding: $navPadding;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: $navColor;
+        margin-left: $navMarginLeft;
+        color: $navHomeRightColor;
+        box-shadow: $navShadow;
+        transition: 1s;
+        display: block;
+
+        &:hover {
+            border: $navHoverBorder;
+        }
+    }
+}
+
+.exNav {
+    display: none;
+}
+
+// loading
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+
+// home
+.mainHome {
+    @include dFlex(row);
+    width: 100%;
+    position: relative;
+
+    .textHome {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h2 {
+            color: blue;
+            padding: 10px;
+        }
+    }
+}
+
+.homeLeft {
+    @include homeStyle($navHomeLeftColor);
+    @include dFlex(row);
+    @include flexMore(none);
+    justify-content: flex-end;
+
+}
+
+.homeRignt {
+    @include homeStyle(white);
+    @include dFlex(row);
+    justify-content: flex-start;
+    @include flexMore(none);
+}
+
+// contract
+.mainCon {
+    width: 90%;
+    @include marginAuto(60px);
+    // margin: 60px auto;
+}
+
+.cardCon {
+    @include dFlex(row);
+    justify-content: space-between;
+
+    .cardStyle {
+        @include dFlex(row);
+        box-shadow: $navShadow;
+        width: 25%;
+        height: 60px;
+        text-align: center;
+        padding: 12px;
+        justify-content: center;
+    }
+
+    .logoCard {
+        @include dFlex(row);
+        @include flexMore(none)
+    }
+
+    .textCard {
+        @include dFlex(column);
+        @include flexMore(none);
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+}
+
+.boxCon form {
+    width: max-content;
+    @include marginAuto(100px);
+    box-shadow: $navShadow;
+    padding: 30px 20px;
+    @include dFlex(column);
+    @include flexMore(none);
+    gap: 20px;
+
+    .texEmlNum {
+        @include dFlex(row);
+        gap: 20px;
+
+        input {
+            @include inputStyle
+        }
+    }
+
+    .textArea textarea {
+        @include inputStyle;
+        height: 100px;
+        width: 400px
+    }
+}
+
+// ragister
+.ragister {
+    @include dFlex(row);
+    @include flexMore(center);
+    // height: 100vh;
+}
+
+.ragisnterContainer {
+    @include dFlex(row);
+    @include flexMore(none);
+    padding: 50px 60px;
+    height: max-content;
+    box-shadow: $navShadow;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.ragFron {
+    @include dFlex(column);
+    @include flexMore(center);
+
+    h1 {
+        margin: 20px 0;
+    }
+
+    form {
+        @include dFlex(column);
+        @include flexMore(center);
+        gap: 18px;
+
+        input {
+            @include mainInputStyle
+        }
+    }
+}
+
+.ragImg {
+    @include dFlex(column);
+    @include flexMore(center);
+
+    img {
+        @include resImage
+    }
+}
+// about
+.aboutLeft{
+    width: 30%;
+    @include dFlex(column);
+    .aboutMore{
+        margin-top: 20px;
+        line-height: 30px;
+    }
+    img{
+        width: 55%;
+        margin: 0;
+    }
+}
+.aboutRight{
+    width: 65%;
+    margin-right: 5%;
+}
+.resManu {
+    display: none !important;
+}
+.aboutRightTop{
+    line-height: 30px;
+}
+.aboutRightButtom{
+    margin-top: 20px;
+}
+.tabs{
+    @include dFlex(row);
+    @include flexMore(space-between);
+}
+// error
+.error{
+    height: 80vh;
+    @include dFlex(column);
+    @include flexMore(center);
+    gap: 50px;
+}
+//----
+.exNav {
+    display: none;
+}
+
+.notSupport {
+    display: none;
+}
+
+// responsive 
+
+@media only screen and (max-width:850px) {
+    .manu {
+        padding: 20px 20px;
+    }
+
+    .boxCon form {
+        .texEmlNum {
+            input {
+                padding: 10px 15px;
+            }
+        }
+
+        .textArea {
+            textarea {
+                height: 80px;
+                width: 200px;
+                padding: 16px 15px;
+            }
+        }
+    }
+
+    .cardCon {
+        .cardStyle {
+            width: 20%;
+            height: 45px;
+            padding: 8px;
+
+        }
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .texEmlNum {
+        flex-direction: column !important;
+    }
+
+    .cardCon {
+        flex-direction: column !important;
+        align-items: center !important;
+
+        .cardStyle {
+
+            width: 50%;
+
+            margin-top: 16px;
+        }
+    }
+
+    .manu {
+        flex-direction: column !important;
+        align-items: start;
+    }
+
+    .imgdiv {
+        margin-bottom: 18px;
+    }
+
+    .link {
+        a {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+
+    .ragisnterContainer {
+        padding: 50px 10px;
+    }
+
+    .ragImg {
+        img {
+            width: 45vh;
+            margin: 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .resManu {
+        display: block !important;
+        position: absolute;
+        right: 30px;
+        top: 26px;
+    }
+
+    .link {
+        flex-direction: column;
+
+        a {
+            margin-top: 8px;
+        }
+    }
+
+    .ragisnterContainer {
+        flex-direction: column;
+    }
+
+    .ragImg img {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    #root {
+        display: none;
+    }
+
+    .notSupport {
+        display: block !important;
+        text-align: center;
+        margin-top: 100px;
+    }
+}

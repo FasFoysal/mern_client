@@ -1,0 +1,366 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  box-shadow: none !important;
+  color: blueviolet !important;
+  border-radius: 5px !important;
+}
+
+.manu {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  background-color: rgba(128, 128, 128, 0.07);
+}
+
+.imgdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.imgdiv img {
+  width: 150px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+}
+.link a {
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgb(13, 255, 0);
+  margin-left: 18px;
+  color: #fff;
+  box-shadow: -1px 1px 8px gray;
+  transition: 1s;
+  display: block;
+}
+.link a:hover {
+  border: 1px solid orange;
+}
+
+.exNav {
+  display: none;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.mainHome {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.mainHome .textHome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.mainHome .textHome h2 {
+  color: blue;
+  padding: 10px;
+}
+
+.homeLeft {
+  width: 50%;
+  background-color: rgba(128, 128, 128, 0.2117647059);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: none;
+  justify-content: flex-end;
+}
+
+.homeRignt {
+  width: 50%;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: none;
+}
+
+.mainCon {
+  width: 90%;
+  margin: 60px auto;
+}
+
+.cardCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cardCon .cardStyle {
+  display: flex;
+  flex-direction: row;
+  box-shadow: -1px 1px 8px gray;
+  width: 25%;
+  height: 60px;
+  text-align: center;
+  padding: 12px;
+  justify-content: center;
+}
+.cardCon .logoCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: none;
+}
+.cardCon .textCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: none;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.boxCon form {
+  width: max-content;
+  margin: 100px auto;
+  box-shadow: -1px 1px 8px gray;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: none;
+  gap: 20px;
+}
+.boxCon form .texEmlNum {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.boxCon form .texEmlNum input {
+  padding: 16px 25px;
+  border: 2px solid greenyellow;
+  border-radius: 5px;
+}
+.boxCon form .texEmlNum input::placeholder {
+  color: rgb(62, 62, 226);
+  font: bolder;
+}
+.boxCon form .textArea textarea {
+  padding: 16px 25px;
+  border: 2px solid greenyellow;
+  border-radius: 5px;
+  height: 100px;
+  width: 400px;
+}
+.boxCon form .textArea textarea::placeholder {
+  color: rgb(62, 62, 226);
+  font: bolder;
+}
+
+.ragister {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ragisnterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: none;
+  padding: 50px 60px;
+  height: max-content;
+  box-shadow: -1px 1px 8px gray;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.ragFron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ragFron h1 {
+  margin: 20px 0;
+}
+.ragFron form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.ragFron form input {
+  text-align: center;
+  padding: 12px 4rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid greenyellow;
+}
+.ragFron form input:focus {
+  outline: none;
+  border-bottom: 2px solid green;
+}
+
+.ragImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ragImg img {
+  width: 50vh;
+  margin: 0 30px;
+}
+
+.aboutLeft {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.aboutLeft .aboutMore {
+  margin-top: 20px;
+  line-height: 30px;
+}
+.aboutLeft img {
+  width: 55%;
+  margin: 0;
+}
+
+.aboutRight {
+  width: 65%;
+  margin-right: 5%;
+}
+
+.resManu {
+  display: none !important;
+}
+
+.aboutRightTop {
+  line-height: 30px;
+}
+
+.aboutRightButtom {
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.exNav {
+  display: none;
+}
+
+.notSupport {
+  display: none;
+}
+
+@media only screen and (max-width: 850px) {
+  .manu {
+    padding: 20px 20px;
+  }
+  .boxCon form .texEmlNum input {
+    padding: 10px 15px;
+  }
+  .boxCon form .textArea textarea {
+    height: 80px;
+    width: 200px;
+    padding: 16px 15px;
+  }
+  .cardCon .cardStyle {
+    width: 20%;
+    height: 45px;
+    padding: 8px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .texEmlNum {
+    flex-direction: column !important;
+  }
+  .cardCon {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .cardCon .cardStyle {
+    width: 50%;
+    margin-top: 16px;
+  }
+  .manu {
+    flex-direction: column !important;
+    align-items: start;
+  }
+  .imgdiv {
+    margin-bottom: 18px;
+  }
+  .link a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .ragisnterContainer {
+    padding: 50px 10px;
+  }
+  .ragImg img {
+    width: 45vh;
+    margin: 0 0;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .resManu {
+    display: block !important;
+    position: absolute;
+    right: 30px;
+    top: 26px;
+  }
+  .link {
+    flex-direction: column;
+  }
+  .link a {
+    margin-top: 8px;
+  }
+  .ragisnterContainer {
+    flex-direction: column;
+  }
+  .ragImg img {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  #root {
+    display: none;
+  }
+  .notSupport {
+    display: block !important;
+    text-align: center;
+    margin-top: 100px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
