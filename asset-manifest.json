@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mern_client/static/css/main.ea8232fb.css",
+    "main.js": "/mern_client/static/js/main.637396f7.js",
+    "index.html": "/mern_client/index.html",
+    "main.ea8232fb.css.map": "/mern_client/static/css/main.ea8232fb.css.map",
+    "main.637396f7.js.map": "/mern_client/static/js/main.637396f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea8232fb.css",
+    "static/js/main.637396f7.js"
+  ]
+}
