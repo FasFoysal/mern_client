@@ -23,7 +23,7 @@ const setLogin = ((data)=>{
     e.preventDefault();
     const {user, pass} = loginData;
     try {
-      const res = await fetch('/login',{
+      const res = await fetch('https://splendorous-gumdrop-0c0736.netlify.app/login',{
         method:"post",
         headers:{
           'Accept':"application/json",
