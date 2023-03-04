@@ -71,7 +71,7 @@ const Contract = () => {
           return { ...p, number: "", text: "" };
         });
         const resData = await res.json();
-        if (res.status === 200) {
+        if (res.status !== 200) {
           toast.success(resData.mgs, { position: "top-center" });
         } else {
           toast.warning(resData.mgs, { position: "top-center" });
