@@ -54,7 +54,7 @@ const Contract = () => {
     const { name, email, number, text } = mgs;
     if (name && email && number && text) {
       try {
-        const res = await fetch("/messagesend", {
+        const res = await fetch("https://mern-1st.onrender.com/messagesend", {
           method: "post",
           headers: {
             Accept: "application/json",
@@ -71,7 +71,7 @@ const Contract = () => {
           return { ...p, number: "", text: "" };
         });
         const resData = await res.json();
-        if (res.status === 200) {
+        if (res.status !== 200) {
           toast.success(resData.mgs, { position: "top-center" });
         } else {
           toast.warning(resData.mgs, { position: "top-center" });
